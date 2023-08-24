@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Calculator</title>
+    
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-gray-200 relative">
+    <div class="container w-3/4 mx-auto text-center capitalize ">
+        <h2 class=" md:text-6xl text-2xl mt-4">Welcome to <span class="text-orange-500">expense Calculator</span></h2>
+        <div class="wrapper grid grid-cols-2 justify-center  md:grid-cols-4 gap-3 sm:my-8 my-4">
+            <div class="bg-gradient-to-r from-cyan-500 to-blue-500 rounded text-center p-3">
+                <div class="font-semibold flex justify-between items-center">
+                  <img src="assets/salary.png" class="w-[50px] hidden sm:block my-3" alt="">
+                  <span class="text-[14px]"> Total income:<span id="totalIncome">$00</span></span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-orange-400 to-orange-600  rounded text-center p-3">
+                <div class="font-semibold flex justify-between items-center">
+                  <img src="assets/poor.png" class="w-[50px] hidden sm:block  my-3" alt="">
+                  <span class="text-[14px]">total expense: <span id="totalExpense">$00</span></span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-r from-blue-400 to-blue-600 rounded text-center p-3">
+                <div class="font-semibold flex justify-between items-center">
+                  <img src="assets/save-money.png" class="w-[50px] hidden sm:block my-3" alt="">
+                  <span class="text-[14px]">Savings Amount: <span id="savingsAmount">$00</span></span>
+                  </div>
+            </div>
+            <div class="bg-gradient-to-r from-purple-500 to-pink-500 rounded text-center p-3">              
+                <div class="font-semibold flex justify-between items-center">
+                  <img src="assets/wallet.png" class="w-[50px] hidden sm:block my-3" alt="">
+                  <span class="text-[14px]">Total Balance: <span id="currentBalance">$00</span></span>
+                  </div>
+            </div>
+        </div>
+    </div>
+      <div class=" flex-1 relative z-10">
+        <div class="w-[400px] bg-white rounded mx-auto overflow-hidden shadow-xl">
+          <div class="px-4 pt-4 pb-8 bg-white rounded-tr-4xl">
+            <h1 class="text-2xl capitalize font-semibold text-gray-900 text-center">Input your income here!</h1>
+            <form class="mt-5" action="" method="POST">
+              <div class="mb-2 flex items-center">
+                <label class="block bg-gray-200 w-[150px] p-3 text-gray-700 text-sm font-bold1 rounded-l" for="income">Your income</label>
+                <input id="income" class="input-field w-[220px] border outline-none rounded-r py-2 px-3" type="text" placeholder="Your income">
+            </div>
+              <div class="mb-2 flex items-center">
+                <label class="block bg-gray-200 w-[150px] p-3 text-gray-700 text-sm font-bold1 rounded-l" for="food">Expanse for Food</label>
+                <input id="food" class="input-field w-[220px] border outline-none rounded-r py-2 px-3" type="text" placeholder="Expanse for Food">
+            </div>
+                <div class="mb-2 flex items-center">
+                <label class="block w-[150px] bg-gray-200 p-3 text-gray-700 text-sm font-bold1 rounded-l" for="cloth">Expanse for Cloth</label>
+                <input id="cloth" class="input-field w-[220px] border outline-none rounded-r py-2 px-3" type="text" placeholder="Expanse for Cloth">
+            </div>
+                  <div class="mb-2 flex items-center">
+                <label class="block bg-gray-200 w-[150px] p-3 text-gray-700 text-sm font-bold1 rounded-l" for="houseRent">Expanse for Rent</label>
+                <input id="houseRent" class="input-field w-[220px] border outline-none rounded-r py-2 px-3" type="text" placeholder="Expanse for Rent">
+            </div>
+                    <div class="mb-2 flex items-center">
+                <label class="block w-[150px] bg-gray-200 p-3 text-gray-700 text-sm font-bold1 rounded-l" for="SavingsInput">Add your Savings %</label>
+                <input id="SavingsInput" value="20" class="input-field w-[220px] border outline-none rounded-r py-2 px-3" type="text" placeholder="Add your Savings %">
+            </div>
+              <input id="calculateBtn" type="sumbit" value="Calculate" class="mt-4 px-4 py-2 rounded bg-blue-500 hover:bg-blue-400 text-white font-semibold text-center block w-full focus:outline-none cursor-pointer" readonly />
+              <h3 id="wrarning" class="text-yellow-600 font-semibold hidden text-center">⚠️ Sorry Field  cannot be negative or empty!</h3>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
